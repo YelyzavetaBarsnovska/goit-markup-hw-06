@@ -50,18 +50,26 @@
             </li>
           </ul>
         </address>
+
+        <button class="burger-btn" type="button">
+          <svg class="burger-icon" width="24" height="24">
+            <use href="./images/icons.svg#icon-menu-mob-phone"></use>
+          </svg>
+        </button>
       </div>
     </header>
 
     <main>
-      <section class="hero">
+      <section class="hero hidden">
         <div class="container">
           <h1 class="hero-title">Effective Solutions for Your Business</h1>
-          <button class="hero-button" type="button">Order Service</button>
+          <button class="hero-button" type="button" data-modal-open>
+            Order Service
+          </button>
         </div>
       </section>
 
-      <section class="features">
+      <section class="features hidden">
         <div class="container">
           <h2 class="features-title visually-hidden">Features</h2>
           <ul class="features-list">
@@ -117,7 +125,7 @@
         </div>
       </section>
 
-      <section class="team">
+      <section class="team hidden">
         <div class="container">
           <h2 class="team-title">Our Team</h2>
 
@@ -313,7 +321,7 @@
         </div>
       </section>
 
-      <section class="portfolio">
+      <section class="portfolio hidden">
         <div class="container">
           <h2 class="portfolio-title">Our Portfolio</h2>
 
@@ -442,7 +450,7 @@
       </section>
     </main>
 
-    <footer class="page-footer">
+    <footer class="page- hidden">
       <div class="container footer-container">
         <div class="footer-wrap">
           <a class="logo footer-logo" href="./index.html">
@@ -454,7 +462,7 @@
           </p>
         </div>
 
-        <div class="footer-social-wrap">
+        <!-- <div class="footer-social-wrap">
           <p class="footer-social-title">Social media</p>
           <ul class="footer-social-list">
             <li class="footer-social-item">
@@ -512,9 +520,9 @@
       </div>
     </footer>
 
-    <div class="backdrop is-open">
+    <div class="backdrop is-open" data-modal>
       <div class="modal">
-        <button class="modal-button-close" type="button">
+        <button class="modal-button-close" type="button" data-modal-close>
           <svg class="modal-button-close-svg" width="8" height="8">
             <use href="./images/icons.svg#icon-close-black"></use>
           </svg>
@@ -604,6 +612,6 @@
         </form>
       </div>
     </div>
-    <script src="./js/modal.js"></script>
+    <script src="./js/modal.js"></script> -->
   </body>
 </html>
