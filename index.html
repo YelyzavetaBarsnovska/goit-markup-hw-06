@@ -41,17 +41,17 @@
             <li class="contacts-item">
               <a class="contacts-link" href="mailto:info@devstudio.com"
                 >info@devstudio.com</a
-              ><br />
+              >
             </li>
             <li class="contacts-item">
               <a class="contacts-link" href="tel:+110001111111"
                 >+11 (000) 111-11-11</a
-              ><br />
+              >
             </li>
           </ul>
         </address>
 
-        <button class="burger-btn" type="button">
+        <button class="burger-btn" type="button" data-mob-open>
           <svg class="burger-icon" width="24" height="24">
             <use href="./images/icons.svg#icon-menu-mob-phone"></use>
           </svg>
@@ -62,7 +62,7 @@
         <div class="container mobile-menu-container">
           <button type="button" class="mobile-menu-close" data-mob-close>
             <svg class="modal-icon-cross" width="8" height="8">
-              <use href="./images/icons.svg#icon-done"></use>
+              <use href="./images/icons.svg#icon-close-black"></use>
             </svg>
           </button>
           <nav class="mobile-menu-nav">
@@ -99,29 +99,29 @@
             </ul>
           </address>
           <ul class="mobile-menu-icon-list">
-            <li class="mobile-team-icon-item">
-              <a class="mobile-team-icon-link" href=""
+            <li class="team-social-item">
+              <a class="team-link-icon" href=""
                 ><svg class="mobile-social-icon" width="16" height="16">
                   <use href="./images/icons.svg#icon-instagram"></use>
                 </svg>
               </a>
             </li>
-            <li class="mobile-team-icon-item">
-              <a class="mobile-team-icon-link" href=""
+            <li class="team-social-item">
+              <a class="team-link-icon" href=""
                 ><svg class="mobile-social-icon" width="16" height="16">
                   <use href="./images/icons.svg#icon-twitter"></use>
                 </svg>
               </a>
             </li>
-            <li class="mobile-team-icon-item">
-              <a class="mobile-team-icon-link" href=""
+            <li class="team-social-item">
+              <a class="team-link-icon" href=""
                 ><svg class="mobile-social-icon" width="16" height="16">
                   <use href="./images/icons.svg#icon-facebook"></use>
                 </svg>
               </a>
             </li>
-            <li class="mobile-team-icon-item">
-              <a class="mobile-team-icon-link" href=""
+            <li class="team-social-item">
+              <a class="team-link-icon" href=""
                 ><svg class="mobile-social-icon" width="16" height="16">
                   <use href="./images/icons.svg#icon-linkedin"></use>
                 </svg>
@@ -206,7 +206,7 @@
             <li class="team-item">
               <img
                 class="team-photo"
-                src="./images/img-1.jpg"
+                src="./images/img-team-men-1-mob-2.jpg"
                 alt="Mark Guerrero"
                 width="264"
               />
@@ -253,7 +253,7 @@
             <li class="team-item">
               <img
                 class="team-photo"
-                src="./images/img-2.jpg"
+                src="./images/img-team-men-2-mob-2.jpg"
                 alt="Tom Ford"
                 width="264"
               />
@@ -300,7 +300,7 @@
             <li class="team-item">
               <img
                 class="team-photo"
-                src="./images/img-3.jpg"
+                src="./images/img-wom-1-mob-2.jpg"
                 alt="Camila Garcia"
                 width="264"
               />
@@ -347,7 +347,7 @@
             <li class="team-item">
               <img
                 class="team-photo"
-                src="./images/img-4.jpg"
+                src="./images/img-team-men-3-2.jpg"
                 alt="Daniel Wilson"
                 width="264"
               />
@@ -460,8 +460,8 @@
                   />
                   <source
                     srcset="
-                      ./images/qacode-mob-1.jpg    1x,
-                      .images/img-qacode-mob-2.jpg 2x
+                      ./images/qacode-mob-1.jpg 1x,
+                      ./images/img-2x.jpg       2x
                     "
                     media="(max-width: 767px)"
                   />
@@ -543,10 +543,7 @@
                     media="(min-width: 768px)"
                   />
                   <source
-                    srcset="
-                      ./images/car-mob-1.jpg 1x,
-                      ./images/car-mob-2.jpg 2x
-                    "
+                    srcset="./images/car-mob-1.jpg 1x, ./images/img-car2.jpg 2x"
                     media="(max-width: 767px)"
                   />
                   <img
@@ -628,8 +625,8 @@
                   />
                   <source
                     srcset="
-                      ./images/girl-mob-1.jpg 1x,
-                      .images/girl-mob-2.jpg  2x
+                      ./images/girl-mob-1.jpg   1x,
+                      ./images/img-girl-mo2.jpg 2x
                     "
                     media="(max-width: 767px)"
                   />
@@ -808,8 +805,12 @@
                   <use href="./images/icons.svg#icon-done"></use>
                 </svg>
               </span>
-              I accept the terms and conditions of the
-              <a class="checkbox-privacy-link" href="">Privacy Policy</a>
+              <span class="modal-custom-link">
+                I accept the terms and conditions of the
+                <a class="checkbox-privacy-link" href=""
+                  >Privacy Policy</a
+                ></span
+              >
             </label>
           </div>
 

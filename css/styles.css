@@ -143,7 +143,7 @@ header {
 .mobile-menu {
   position: fixed;
   top: 0;
-  left: 0; /* Змінено з right на left для кращої підтримки */
+  left: 0;
   width: 100%;
   height: 100%;
   background-color: #fff;
@@ -152,7 +152,6 @@ header {
   pointer-events: none;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  z-index: 1000; /* Додано z-index */
 }
 
 .mobile-menu.is-open {
@@ -163,31 +162,39 @@ header {
 
 .mobile-menu-container {
   position: relative;
-  padding: 72px 24px 40px;
+  padding-top: 72px;
+  padding-bottom: 40px;
+  padding-right: 24px;
   display: flex;
   flex-direction: column;
   height: 100%;
-  overflow-y: auto; /* Додано прокрутку, якщо контент не поміщається */
 }
 
 .mobile-menu-close {
   position: absolute;
   top: 24px;
   right: 24px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   width: 24px;
   height: 24px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #404bbf;
+  background-color: transparent;
   padding: 0;
-  border: none;
-  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .mobile-menu-close svg {
-  fill: #ffffff;
+  fill: #2e2f42;
+}
+
+.mobile-menu-close:hover,
+.mobile-menu-close:focus {
+  border: none;
+  background-color: #404bbf;
 }
 
 .mobile-menu-nav {
@@ -197,19 +204,24 @@ header {
 
 .mobile-menu-nav-list {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
-  gap: 40px;
+  row-gap: 40px;
 }
 
 .mobile-menu-nav-link {
   display: block;
-  font: 700 36px/1.11 "Roboto", sans-serif;
+  padding: 0;
+  font: 700 36px / 1.11111 "Roboto", sans-serif;
   letter-spacing: 0.02em;
   color: #2e2f42;
+  position: relative;
 }
 
-.mobile-menu-nav-link.current {
+.mobile-menu-nav-link.current,
+.mobile-menu-contacts-link.current {
   color: #404bbf;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .mobile-menu-contacts {
@@ -218,7 +230,7 @@ header {
 
 .mobile-menu-contacts-list {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   gap: 24px;
 }
 
@@ -231,7 +243,10 @@ header {
 .mobile-menu-icon-list {
   display: flex;
   justify-content: space-between;
-  gap: 16px;
+}
+
+.mobile-social-icon {
+  fill: #f4f4fd;
 }
 
 /* hero */
@@ -366,7 +381,7 @@ header {
 
 .team-list {
   display: flex;
-  gap: 72px;
+  gap: 64px 24px;
   flex-wrap: wrap;
 }
 
@@ -551,6 +566,11 @@ header {
   margin-bottom: 16px;
   color: #ffffff;
   text-align: center;
+}
+
+.footer-social-item {
+  width: 40px;
+  height: 40px;
 }
 
 .footer-social-list {
@@ -769,6 +789,10 @@ header {
   fill: #4d5ae5;
 }
 
+.modal-form-textarea {
+  margin-bottom: 16px;
+}
+
 .modal-textarea {
   border: 1px solid rgba(46, 47, 66, 0.4);
   background-color: transparent;
@@ -803,7 +827,7 @@ header {
   margin-bottom: 24px;
 }
 
-.modal-checkbox-input + .modal-checkbox-label .modal-custom-checkbox {
+.modal-checkbox-input:checked + .modal-checkbox-label .modal-custom-checkbox {
   background-color: #404bbf;
   border: none;
   fill: #f4f4fd;
@@ -814,6 +838,8 @@ header {
   letter-spacing: 0.04em;
   line-height: 1.17;
   font-size: 12px;
+  display: flex;
+  align-items: center;
 }
 
 .checkbox-privacy-link {
@@ -836,6 +862,7 @@ header {
   align-items: center;
   margin-right: 8px;
   fill: transparent;
+  flex-shrink: 0;
 }
 
 .form-submit-btn {
@@ -852,6 +879,9 @@ header {
   min-width: 169px;
   display: block;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 4px;
 }
 
 .form-submit-btn:hover,
@@ -1157,6 +1187,11 @@ header {
 
   /* section features  */
 
+  .features {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+
   .features-container {
     display: flex;
     align-items: center;
@@ -1207,7 +1242,8 @@ header {
   /* section portfolio  */
 
   .portfolio {
-    padding: 120px 0;
+    padding-top: 120px;
+    padding-bottom: 120px;
   }
 
   .portfolio-list {
