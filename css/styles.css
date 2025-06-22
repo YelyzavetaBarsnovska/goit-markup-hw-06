@@ -1035,6 +1035,8 @@ header {
     flex-wrap: wrap;
     flex-direction: row;
     gap: 72px 24px;
+    padding-left: 92px;
+    padding-right: 148px;
   }
 
   .footer-logo,
@@ -1045,8 +1047,7 @@ header {
   .page-footer {
     padding-top: 96px;
     padding-bottom: 96px;
-    padding-left: 92px;
-    padding-right: 148px;
+
     color: #f4f4fd;
     background-color: #2e2f42;
   }
